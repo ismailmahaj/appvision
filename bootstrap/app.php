@@ -14,7 +14,6 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -52,4 +51,5 @@ $app->singleton(
 |
 */
 
+// $app->register(Flipbox\OrmManager\OrmManagerServiceProvider::class);
 return $app;

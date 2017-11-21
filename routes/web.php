@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/store', 'CentreInteretController@store');
+Auth::routes();
+
+Route::get('/home', 'CentreInteretController@index')->name('home');
+Auth::routes();

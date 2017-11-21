@@ -163,14 +163,18 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
+        
 
         /*
          * Package Service Providers...
          */
-
+        //  package orm flipbox relation entre chaque table 
+        // Flipbox\OrmManager\OrmManagerServiceProvider::class,
         /*
-         * Application Service Providers...
-         */
+        * Application Service Providers...
+        */
+        Barryvdh\Debugbar\ServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

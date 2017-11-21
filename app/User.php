@@ -26,4 +26,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    protected function interet(){
+        return $this->hasManyThrough(Interet::class, 
+                                     User_interet::class,
+                                     'interet_id',  // Foreign key on users table...
+                                     'user_interet_id',  // Foreign key on users_interet table...
+                                     'id', // Local key on user table...
+                                     'id' // Local key on interet table...
+                                    );
+    }
 }
