@@ -33,22 +33,15 @@ class CentreInteretController extends Controller
     public function store(Request $request)
     {
         $interet = new Interet();
-        $interet->Interet = $request->q_answer; 
-        $interet->user_interet_id = auth()->user()->id;
+        $interet->Interet = $request->q_answer; // récupere la valeur du input
+        $interet->user_interet_id = auth()->user()->id;   // je récupere l'id de l'utilisateur 
         // $dataInput=Input::all();
         // echo $_POST['q_answer'];
         // dump($dataInput);
         $interet->save();
-        return view('welcome');
+        return view('Accueil');
     }
-    public function postForm(Interet $request)
-	{
-		$interet = new interets;
-		$interet->interets = $request->input('q_answer');
-        $interet->save();
-		
-		return view('welcome');
-    }
+ 
     // public function create(array $data)
     // {
     //     return Interets::create([
